@@ -7,9 +7,8 @@ let level = 0;
 document.addEventListener("keypress", () => {
   if (!started) {
     document.querySelector("#level-title").textContent = `Level ${level}`;
-    gameSequence()
-    ;started = true;
-    
+    gameSequence();
+    started = true;
   }
 });
 
@@ -37,7 +36,8 @@ function playAudio(color) {
   audio.play();
 }
 function gameSequence() {
-    userClickedPattern=[];
+  level++;
+  userClickedPattern = [];
   let rand = Math.floor(Math.random() * 4);
   let color = buttonColors[rand];
   gamePattern.push(color);
