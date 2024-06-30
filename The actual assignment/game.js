@@ -17,7 +17,8 @@ document.querySelectorAll(".btn").forEach((btn) => {
     userClickedPattern.push(id);
     clickAnimation(id);
     playAudio(id);
-    alert(userClickedPattern)
+    gameSequence();
+    alert(gamePattern)
   });
 });
 
@@ -33,5 +34,12 @@ function clickAnimation(id) {
     let relPath = `sounds/${color}.mp3`;
     let audio = new Audio(relPath);
     audio.play();
+  }
+  function gameSequence() {
+    let rand = Math.floor(Math.random() * 4);
+  let color = buttonColors[rand];
+  gamePattern.push(color);
+  clickAnimation(color);
+
   }
 
