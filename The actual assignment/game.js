@@ -6,7 +6,7 @@ let level = 0;
 
 document.addEventListener("keypress", () => {
     if (!started) {
-      alert("Start game")
+       document.querySelector("#level-title").textContent = `Level ${level}`
       started = true;
     }
   });
