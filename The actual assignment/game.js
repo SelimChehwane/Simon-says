@@ -13,6 +13,17 @@ document.addEventListener("keypress", () => {
 
 document.querySelectorAll(".btn").forEach((btn) => {
   btn.addEventListener("click", function (event) {
-    alert("click");
+    let id = event.target.id;
+    clickAnimation(id);
   });
 });
+
+function clickAnimation(id) {
+    let element = document.getElementById(id);
+    element.classList.add("pressed");
+    setTimeout(() => {
+      element.classList.remove("pressed");
+    }, 100);
+  }
+
+  
