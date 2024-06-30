@@ -5,8 +5,14 @@ let started = false;
 let level = 0;
 
 document.addEventListener("keypress", () => {
-    if (!started) {
-       document.querySelector("#level-title").textContent = `Level ${level}`
-      started = true;
-    }
+  if (!started) {
+    document.querySelector("#level-title").textContent = `Level ${level}`;
+    started = true;
+  }
+});
+
+document.querySelectorAll(".btn").forEach((btn) => {
+  btn.addEventListener("click", function (event) {
+    alert("click");
   });
+});
