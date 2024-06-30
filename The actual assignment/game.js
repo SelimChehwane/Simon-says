@@ -14,8 +14,10 @@ document.addEventListener("keypress", () => {
 document.querySelectorAll(".btn").forEach((btn) => {
   btn.addEventListener("click", function (event) {
     let id = event.target.id;
+    userClickedPattern.push(id);
     clickAnimation(id);
     playAudio(id);
+    alert(userClickedPattern)
   });
 });
 
