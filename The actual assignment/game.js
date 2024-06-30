@@ -15,6 +15,7 @@ document.querySelectorAll(".btn").forEach((btn) => {
   btn.addEventListener("click", function (event) {
     let id = event.target.id;
     clickAnimation(id);
+    playAudio(id);
   });
 });
 
@@ -26,4 +27,9 @@ function clickAnimation(id) {
     }, 100);
   }
 
-  
+  function playAudio(color) {
+    let relPath = `sounds/${color}.mp3`;
+    let audio = new Audio(relPath);
+    audio.play();
+  }
+
